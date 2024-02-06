@@ -7,11 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
     homeButton.addEventListener('click', function() {
         homePage.classList.add('active');
         feedbackPage.classList.remove('active');
+
+        // Show home page and hide feedback page
+        homePage.style.display = 'block';
+        feedbackPage.style.display = 'none';
     });
 
     feedbackButton.addEventListener('click', function() {
         feedbackPage.classList.add('active');
         homePage.classList.remove('active');
+
+        // Show feedback page and hide home page
+        feedbackPage.style.display = 'block';
+        homePage.style.display = 'none';
     });
 
+    // Show home page by default
+    homePage.classList.add('active');
+    feedbackPage.classList.remove('active');
 });
